@@ -56,12 +56,13 @@ async def create_upload_file(file: UploadFile):
     # plt.imshow(PIL_image)
     # plt.show();
 
-    val = tf.keras.utils.image_dataset_from_directory(
-        "./img/",
-        seed=1337,
-        image_size=(299, 299),
-        batch_size=32,
-    );
+    # val = tf.keras.utils.image_dataset_from_directory(
+    #     "./img/",
+    #     seed=1337,
+    #     image_size=(299, 299),
+    #     batch_size=32,
+    # );
+    val = np.expand_dims(cv2.resize(cv2.imread("./img/fake/"+file.filename)[:, :, ::-1], (299, 299)), axis=0);
     pred = model.predict(val);
 
     os.replace("./img/fake/"+file.filename, "./history/"+ file.filename);
