@@ -1,0 +1,12 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Project 350 FastAPI (BackEnd)
+message: citation for TWP report
+type: software
+authors:
+  - given-names: Shahrab
+    family-names: Khan
+    email: shahrab03@student.sust.edu
+    affiliation: Shahjalal University of Science and Technology
